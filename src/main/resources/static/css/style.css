@@ -1,0 +1,40 @@
+.header{
+	background: #2196f3;
+    height: 150px;
+}
+.footer{
+	background: #2196f3;
+    height: 150px;
+}
+.header-txt{
+	text-align: right;
+    font-style: italic;
+    font-family: emoji;
+    color: aliceblue;
+    font-size: large;
+    float:right;
+    width:50%
+}
+.taskListdiv{
+	align-content: right;
+}
+
+.nav-link {
+	color: aliceblue;
+	}
+div{
+	margin-bottom: 5px
+}
+
+.commentdiv{
+overflow:scroll;
+ height:370px;
+}
+
+.commentblock{
+	border:1px solid black;
+	border-radius: 15px;
+}
+.statusMap{
+	display: none;
+}

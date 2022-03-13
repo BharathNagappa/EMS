@@ -1,0 +1,4 @@
+<html th:fragment="copy"><head><link rel="stylesheet" th:href="@{/css/style.css}"></head><body>
+	<div class="header">		<div class="container">			<div class="col-md-2">				<h1 style="font-variant-caps: all-petite-caps;font-size:40px;font-family: cursive;color: aliceblue;">EMS</h1 >			</div >			<div class="col-md-8" style="float:right">			<nav class="nav">  					<a class="nav-link active" href="/tasks">Tasks</a> 					<a class="nav-link" href="/">Dashboard</a>  					<a class="nav-link" href="/Admin">Admin</a>				</nav>			</div >			<div class="header-txt">					<span th:text="|Hello! ${user.userId}|"></span>					<span><a style="color: aliceblue" th:href="@{/logout}">logout?</a ></span>			</div>					</div>	</div>
+</body>
+</html >

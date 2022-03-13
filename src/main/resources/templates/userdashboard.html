@@ -1,0 +1,30 @@
+<html th:fragment="copy">
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+<script src="/js/dashboard.js"></script>
+<div class="container">
+<div class="col-md-6" >
+<div id="piechart" style="width: 900px; height: 500px;"></div>
+	<!--<table id="mytasks">
+	<h4 style="color: #2196f3;"><a href="/tasks">My Tasks</a></h4>
+	<thead><tr><th>Status</th><th>Count</th></tr></thead>
+	<tbody>
+	<th:block th:each="row : ${StatusMap}">
+	<tr>
+	<td th:text="${row.key}"></td >
+	<td th:text="${row.value}"></td >
+	</tr >
+	</th:block>
+	<tr><td>In Progress</td><td>4</td></tr>
+	<tr><td>To DO</td><td>12</td></tr>
+	<tr><td>Done</td><td>24</td></tr>
+	</tbody > 
+	</table >-->
+	<input th:each="row : ${StatusMap}" th:id="${row.key}" class="statusMap" th:value="${row.value}" type="hidden"/>
+	
+</div >
+</div >
+</body>
+</html >

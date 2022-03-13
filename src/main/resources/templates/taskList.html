@@ -1,0 +1,29 @@
+<html th:fragment="copy">
+<head>
+</head>
+<body>
+<script src="/js/dashboard.js"></script>
+<div class="container">
+<div class="col-md-12">
+<div style="margin-bottom: 20px">
+	<button class="btn btn-primary" onClick="return createTask()">Add Task</button>
+</div  >
+<div>
+	<table id="taskList" class="order-column" style="width:100%;">
+	<thead><tr><th>Task#</th><th>Title</th><th>Status</th><th>Created Date</th></tr></thead>
+	<tbody>
+	<th:block th:each="row : ${tasks}">
+	<tr>
+	<td><a th:href="|task/${row.id}|" th:text="${row.taskNumber}"></a ></td >
+	<td th:text="${row.title}"></td >
+	<td th:text="${row.status}"></td >
+	<td th:text="${row.createDate}"></td >
+	</tr>
+	</th:block>
+	</tbody>
+	</table >	
+</div>
+</div  >
+</div >
+</body>
+</html >

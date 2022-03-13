@@ -1,0 +1,49 @@
+<html th:fragment="copy">
+<head>
+</head>
+<body>
+<script src="/js/dashboard.js"></script>
+<div class="container">
+<div style="margin-bottom: 20px">
+	<button class="btn btn-primary" onClick="return createTask()">Add Task</button>
+	<button class="btn btn-primary">Edit Task</button>
+</div  >
+<div class="col-md-8">
+	<div>
+		<label><b>Task Number: </b></label>
+		<span th:text="${task.taskNumber}"></span  >
+	</div >
+	<div >
+		<label><b>created Date: </b></label>
+		<span th:text="${task.createDate}"></span>
+	</div >
+	<div style="float:right">
+		<label><b> Status: </b></label>
+		<span th:text="${task.status}"></span>
+		</br>
+	</div >
+	<div>
+		<label><b> Title: </b></label>
+		<span  th:text="${task.title}"></span >
+	</div>
+	<div>
+		<label><b>Description: </b></label>
+		<text-area th:text="${task.description}">
+		</text-area >
+	</div>
+	<label><b>Comments: </b ></label>
+	<div  class="commentdiv">
+		<div class="commentblock" th:each="row : ${task.comment}" >
+			<div style="color:cornflowerblue">
+				<span th:text="${row.commentedBy}"></span> commented on <span th:text="${row.createDate}"></span>
+			</div >
+			<div>
+				<text-area th:text="${row.description}">
+				</text-area >
+			</div>
+		</div  >
+	</div  >
+</div >
+</div >
+</body>
+</html >
